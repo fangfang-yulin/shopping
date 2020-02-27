@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="//js01.daoju.qq.com/zb/lolriotmall/pc/images/favicon.ico" type="image/x-icon">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>购物车-英雄联盟周边商城</title>
+		<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
+		<link rel="stylesheet" href="../css/header.css" />
+		<link rel="stylesheet" type="text/css" href="../css/shopCar.css"/>
+		<link rel="stylesheet" href="../iconfont/iconfont.css">
+		<link rel="stylesheet" href="../css/index.css" />
+		<link rel="stylesheet" href="../css/animate.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/header2.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+	</head>
+	<body id="boy">
+	
+	<div id="l-box">
+				<button onclick="Stop()" id="close"></button>	
+				<div class="btns" id="btns">
+					<button class="login_user login_active" onclick="btns0()">账号密码登录</button>
+					<button class="reg_user" onclick="btns1()">用户注册</button>
+				</div>
+				<div id="user_login" class="user_login">
+					<div class="tel">
+						用户登录
+					</div>
+			        <form action="" methode="post" name="user_login_frm" onsubmit="return Submit_login()" autocomplete="off" autocomplete="new-password">
+			           <!--<span>用户名:</span>--><input type="text" autocomplete="off" autocomplete="new-password" style="text-indent: 32px;" name="user" id="user" value="" onblur="checkuser_Login(this)" placeholder="：请输入用户名"/><i id="touser"></i><br /><br />
+	           		<!--<span>密码:</span>--><input type="password" autocomplete="off" autocomplete="new-password" style="text-indent: 32px;" name="pwd" id="pwd" value="" onblur="checkpwd_Login(this)" placeholder="：请输入密码"/><i id="touser"></i><br /><br />
+			            <input type="submit" id="" name="" value="登录" />
+			        </form>
+		    	</div>
+		    	<div id="user_reg" class="user_reg">
+					<div class="tel">
+						新用户注册
+					</div>
+					<form action="" methode="post" name="frm" onsubmit="return Submit()" autocomplete="off" autocomplete="new-password">
+						<!--<span>用户名:</span>--><input type="text" autocomplete="off" autocomplete="new-password" style="text-indent: 32px;" name="user" id="user" value="" onblur="checkUser(this)" placeholder="：请输入用户名"/><i id="touser"></i><br />
+						<!--<span>密码:</span>--><input type="password" autocomplete="off" autocomplete="new-password" style="text-indent: 32px;" name="pwd" id="pwd" value="" onblur="checkpwd(this)" placeholder="：请输入密码"/><i id="touser"></i><br />
+						<!--<span>确认密码:</span>--><input type="password" autocomplete="off" autocomplete="new-password" style="text-indent: 32px;" name="cpwd" id="cpwd" value="" onblur="checkcpwd(this)" placeholder="：请确认密码"/><i id="touser"></i><br />
+						<!--<span>电子邮箱:</span>--><input type="text" autocomplete="off" autocomplete="new-password" style="text-indent: 32px;" name="email" id="email" value="" onblur="checkemail(this)" placeholder="：请输入邮箱"/><i id="touser"></i><br />
+						<span>性别:</span><br/><br/><label><input type="radio" checked="checked" name="sex" value="1"><b>男</b></label><label><input type="radio" name="sex" value="0"><b>女</b></label><br />
+						<span>生日:</span><br/><br/><input type="date" name="birthday" id="birthday" value="" onblur="checkbirthday(this)" /><i id="touser"></i><br />
+						<input type="submit" id="" name="" value="注册"/>
+					</form>
+				</div>
+		</div>
+	
+	<!-- ---------头部begin----------- -->
+	<div id="l_header" style="margin-top: -150px;">
+		<!-- 上部分 -->
+		<div class="top-bar">
+			<div class="container" style="padding:0">
+				<div class="row" style="position: relative;">
+					<div class="col-lg-4 c-md-12 tbl">
+						<h1 class=" logo1"><a href="index.html" title="英雄联盟"></a></h1>
+						<h1 class="logo2"><a href="index.html" title="周边商城"></a></h1>
+						<h1 class="">
+							<div class="scroll_begin"><span class="tbp"> 由于国庆期间地方交通管制，发货将受到影响，北京地区目前已停止发货，2019.10.1-2019.10.2英雄联盟周边商城将暂停发货，于10.3日恢复正常，给您造成的不便，敬请谅解！</span></div>
+						</h1>
+					</div>
+					<div class="col-lg-8 d-md-none d-lg-block tbr">
+						<ul class="uls1">
+							<li id="store_login" class="store_login" style="margin: 0px 5px;"></li>
+							<li id="quit" class="quit" style="margin: 0px 5px;"><a href="">退出</a></li>
+							<li id="store_cart" class="store_cart"><a href="shopCar.html"><i class="iconfont icon-gouwuchekong text-white" style="font-size: 20px"></i>购物车 <strong class="sb" id="sb">0</strong></a></li>
+							<li class="pre-sale"><a href="#"><i class="iconfont icon-kefu text-white " style="font-size: 20px"></i>客服咨询<i class="iconfont icon-youjiantou text-white" style="font-size: 10px"></i></a>
+							<ul class="ul1">
+								<li><a href="#">售前咨询</a></li>
+								<li><a href="#">售后咨询</a></li>
+							</ul>
+							</li>
+							<li class="after-sales"><a href="#"><i class="iconfont icon-weixinerweima text-white after" style="font-size: 20px"></i>微信商场<i class="iconfont icon-youjiantou text-white" style="font-size: 10px"></i></a>
+								<div class="nav-img"><img src="../img/wxcode.png" alt=""></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 下部分 -->
+		<nav class="navbar navbar-expand-lg navbar-light nav-l">
+			<div class="container container_nav">
+                <a class="navbar-brand" href="#">
+                    <img src="../img/base_r1_c1.png" alt="" width="100%">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#l_nav" aria-controls="l_nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">按钮</span>
+                </button>
+                <div class="collapse navbar-collapse" id="l_nav">
+                    <ul class="navbar-nav mr-auto nav">
+                    <li class="nav-item">
+                    <a class="nav-link" href="index.html">商场首页 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+					<a class="nav-link" href="Modelcarve.html">雕塑手办</a>
+					<div class="nav-c">
+						<ul>
+							<li><a href="Modelcarve.html">大型雕塑</a></li>
+							<li><a href="Modelcarve.html">小型雕塑</a></li>
+							<li><a href="Modelcarve.html">限定手办</a></li>
+							<li><a href="Modelcarve.html">迷你手办</a></li>
+							<li><a href="Modelcarve.html">手办</a></li>
+						</ul>
+						<img src="../img/xl1.png" alt="">
+					</div>
+					<div class="nav-x">
+						<p><a href="Modelcarve.html">大型雕塑</a></p>
+						<p><a href="Modelcarve.html">小型雕塑</a></p>
+						<p><a href="Modelcarve.html">限定手办</a></p>
+						<p><a href="Modelcarve.html">迷你手办</a></p>
+						<p><a href="Modelcarve.html">手办</a></p>
+					</div>
+                    </li>
+                    <li class="nav-item">
+					<a class="nav-link" href="plush.html">毛绒玩具</a>
+					<div class="nav-c">
+						<ul>
+							<li><a href="plush.html">玩偶</a></li>
+							<li><a href="plush.html">帽子</a></li>
+						</ul>
+						<img src="../img/xl2.png" alt="">
+					</div>
+					<div class="nav-x ">
+						<p><a href="plush.html">玩偶</a></p>
+						<p><a href="plush.html">帽子</a></p>
+					</div>
+                    </li>
+                    <li class="nav-item">
+					<a class="nav-link" href="clothes.html">男女服饰</a>
+					<div class="nav-c">
+						<ul>
+							<li><a href="clothes.html">卫衣&夹克</a></li>
+							<li><a href="clothes.html">T桖</a></li>
+							<li><a href="clothes.html">其他</a></li>
+						</ul>
+						<img src="../img/xl3.png" alt="">
+					</div>
+					<div class="nav-x">
+						<p><a href="clothes.html">卫衣&夹克</a></p>
+						<p><a href="clothes.html">T桖</a></p>
+						<p><a href="clothes.html">其他</a></p>
+					</div>
+                    </li>
+                    <li class="nav-item">
+					<a class="nav-link" href="zhoubian/LPL.html" target="_blank">LPL周边</a>
+					<div class="nav-c">
+						<ul>
+							<li><a href="zhoubian/LPL.html" target="_blank">队服T桖</a></li>
+							<li><a href="zhoubian/LPL.html" target="_blank">队服裤子</a></li>
+							<li><a href="zhoubian/LPL.html" target="_blank">队服外套</a></li>
+							<li><a href="zhoubian/LPL.html" target="_blank">LPL其他</a></li>
+						</ul>
+						<img src="../img/xl4.png" alt="">
+					</div>
+					<div class="nav-x">
+						<p><a href="zhoubian/LPL.html" target="_blank">队服T桖</a></p>
+						<p><a href="zhoubian/LPL.html" target="_blank">队服裤子</a></p>
+						<p><a href="zhoubian/LPL.html" target="_blank">队服外套</a></p>
+						<p><a href="zhoubian/LPL.html" target="_blank">LPL其他</a></p>
+					</div>
+					</li>
+					<li  class="nav-item">
+					<a class="nav-link" href="jwerly.html">珠宝首饰</a>
+					<div class="nav-c">
+						<ul>
+							<li><a href="jwerly.html">项链</a></li>
+							<li><a href="jwerly.html">幸运珠</a></li>
+							<li><a href="jwerly.html">手链</a></li>
+							<li><a href="jwerly.html">配饰</a></li>
+						</ul>
+						<img src="../img/xl5.png" alt="">
+					</div>
+					<div class="nav-x">
+						<p><a href="jwerly.html">项链</a></p>
+						<p><a href="jwerly.html">幸运珠</a></p>
+						<p><a href="jwerly.html">手链</a></p>
+						<p><a href="jwerly.html">配饰</a></p>
+					</div>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="others.html">其他</a>
+					<div class="nav-c">
+						<ul>
+							<li><a href="others.html">鼠标垫</a></li>
+							<li><a href="others.html">手机壳</a></li>
+							<li><a href="others.html">海报艺术</a></li>
+							<li><a href="others.html">其他</a></li>
+						</ul>
+						<img src="../img/xl6.png" alt="">
+					</div>
+					<div class="nav-x">
+						<p><a href="others.html">鼠标垫</a></p>
+						<p><a href="others.html">手机壳</a></p>
+						<p><a href="others.html">海报艺术</a></p>
+						<p><a href="others.html">其他</a></p>
+					</div>
+                    </li>
+                    </ul>
+				</div>
+				<form class="search form-inline my-2 my-lg-0 align-items-center" onsubmit="return false">
+					<input class="form-control mr-sm-2" type="search" placeholder="阿狸" aria-label="Search" id="Search_Value">
+					<button class="btn-xs btn1 my-2 my-sm-0" type="submit" id="Search_shop_list_btn"></button>
+				</form>
+            </div>  		
+		</nav>
+	</div>
+	<!-- ----------头部end------------ -->
+	<!-- ----------头部end------------ -->
+	
+	
+		<!--购物车-->
+		<div class="box">
+			
+
+		<div class="container " id="all">
+			
+			<!--<div class="panel panel-default">-->
+				
+				<!--购物车顶部-->
+			 <!-- <div class="panel-heading">-->
+			  	<!--<ul class="car-title">
+			  	<li><input type="checkbox" class="checkall" />&nbsp;&nbsp;</li>
+			  	<li >全选</li>
+			  	<li style="margin-left: 100px;">商品信息</li>
+			  	<li style="margin-left: 220px;">单价（元）</li>
+			  	<li style="margin-left: 100px;">数量</li>
+			  	<li style="margin-left: 100px;">小计</li>
+			  	<li style="margin-left: 100px;">操作</li>
+			  	</ul>
+			   </div>-->
+			   
+			   <!--  购物车商品内容-->
+			  <!--<div class="panel-body">
+			  	
+				  	<input type="checkbox" class="check" />
+				  	<div class="media">
+					  <div class="media-left">
+					    <a href="#">
+					      <img class="media-object small_img" src="../test.png" alt="..." >
+					    </a>
+					  </div>
+					  <div class="media-body">
+					    <h4 class="media-heading">商品信息商品信息商品信息</h4>
+					    ...
+					     <span class="carDetail1">￥150.00</span>
+					    <div class="btn-group" role="group" aria-label="...">
+					   		<button type="button" class="btn btn-default">-</button>
+							<button type="button" class="btn btn-default">1</button>
+							<button type="button" class="btn btn-default" >+</button>
+				    	</div>
+					     <span class="carDetail2">￥450.00</span>
+					     <span class="carDetail3">删除</span>
+					   
+					  </div>
+					</div>
+				
+			  </div>-->
+			  
+			  <!--购物车底部，继续购物和清空购物车-->
+			  <!--<div class="car-footer">
+			  	<p style="margin-left: 10px; margin-top: 5px;"><input type="checkbox" />&nbsp;&nbsp;</p>
+			  	<p >全选</p>
+			  	<p style="margin-left: 30px; " ><a href="#" style="color: red;">继续购物</a></p>
+			  	<p style="float: right;margin-right: 80px;" ><a href="#"  class="a1"><img src="../images/del.jpg" style="margin-top: -5px;"/>&nbsp;清空购物车</a></p>
+			  </div>
+			  
+			</div>-->
+		</div>
+		</div>
+		
+	
+	<!--相关商品推荐-->
+	<div class="container " id="intro">
+		<!--<div class="jingpin">
+			<h4>精品推荐</h4>
+		</div>
+		
+		<dl class="xiangguan">
+			<dt><a href="#"><img src="../mide_03.jpg"/><span></span></a></dt>
+			
+			<dd>
+				<a href="#">
+					<p>T恤T恤T恤</p>
+					<p style="color: black; margin-top: -5px;">
+					  ￥150
+					</p>
+					<p class="buycar">加入购物车</p>
+				</a>
+			</dd>
+		</dl>-->
+	</div>
+	
+	
+	<!--我的购物车，总计结算-->
+	<div class="myBuycar" id="buycar">
+		<!--<p class="myBuycar-title">&nbsp;&nbsp;<img src="../images/shopcar1.jpg"/>&nbsp;&nbsp;我的购物车</p>
+		<div class="myBuycar-contant">
+			<p style="color: red;margin-top: 16px;">满199包邮</p>
+			<p ><img src="../images/yinc.png"/></p>
+			<p class="shopcount">商品数量：</p>
+			<p>商品金额：<span style="color: red;">￥555.00</span></p>
+			<p class="pay">去结算</p>
+			<div class="myBuycar-footer">
+				<h4>承诺</h4>
+				<ul>
+					<li>7天无理由退换货</li>
+					<li>100%官方正品</li>
+					<li>全场每单满199元包邮</li>
+				</ul>
+			</div>
+		</div>-->
+	</div>
+	
+	<!-- ---------尾部begin----------- -->
+	<section id="l_footer">
+		<div class="container mt-5 mb-4">
+			<div class="row d-flex justify-content-around product">
+				<div><i class="i1" ></i><span style="font-size: 14px;">7天无理由退换货</span></div>
+				<div><i class="i2" ></i><span style="font-size: 14px;">100%官方正品</span></div>
+				<div><i class="i3" ></i><span style="font-size: 14px;">全场每单满199元包邮</span></div>
+			</div>
+		</div>
+		<div class="shop">
+			<div class="container">
+			<div class="row">
+				<ul class="col-md-3 pl-5">
+					<li>购物指南</li>
+					<li><a href="#">帐号注册与登录</a></li>
+					<li><a href="#">购买流程介绍</a></li>
+					<li><a href="#">支付方式</a></li>
+					<li><a href="#">常见问题</a></li>
+				</ul>
+				<ul class="col-md-3 pl-5">
+					<li>配送服务</li>
+					<li><a href="#">全场满199元免运费</a></li>
+					<li><a href="#">配送范围及运费</a></li>
+					<li><a href="#">配送进度查询</a></li>
+				</ul>
+				<ul class="col-md-3 pl-5">
+					<li>售后服务</li>
+					<li><a href="#">7天无理由退换货</a></li>
+					<li><a href="#">退换货流程</a></li>
+					<li><a href="#">商品送错的处理方案</a></li>
+					<li><a href="#">售后服务及投诉</a></li>
+				</ul>
+				<ul class="col-md-3 pl-5">
+					<li>服务中心</li>
+					<li><a href="#">售前咨询 售后服务</a></li>
+					<li><a href="#">客服热线：18397596284</a></li>
+					<li><a href="#">售后:2606252964@qq.com</a></li>
+				</ul>
+			</div>
+		</div>
+		</div>
+		<div class="container mt-5">
+			<div class="row">
+				<div class="message"><span><a href="#">关于商城</a><span><a href="#">服务条款</a><span><a href="#">合作伙伴</a><span><a href="#">法律声明</a></div>
+			</div>
+			<div class="row mt-4 mb-4 bottom">
+				<div class="col-md-3 offset-2 text-right"><span></span><i></i></div>
+				<div class="col-md-6 pl-4 b_right">
+					备案号:湘ICP备19011998号-2 | 客服邮箱： <a href="#">2606252964@qq.com</a>
+					<p>Copyright (C) 此网站为个人模仿制作，不涉及任何商业应用，绝不侵权腾讯</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ----------尾部end------------ -->
+	</body>
+	
+
+	
+	<script src="../js/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/utils.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/shopCar.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/jquery-3.4.1.js"></script>
+	<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="../js/header.js"></script>
+	<script src="../js/jquery-3.4.1.js"></script>
+	<script src="../js/wow.min.js"></script>
+	<script src="../js/index.js"></script>
+	<script src="../js/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/header2.js"></script>
+	<script src="../js/loginodd.js"></script>
+	<script src="../js/Search_shop_list.js" type="text/javascript" charset="utf-8"></script>
+	
+</html>

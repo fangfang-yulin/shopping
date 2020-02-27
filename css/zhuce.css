@@ -1,0 +1,123 @@
+.header {
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    overflow: hidden;
+    border-bottom: 1px solid black;
+    line-height: 100px;
+}
+
+.logo-title {
+    float: left;
+    font-size: 20px;
+    color: black;
+}
+
+.have-account {
+    float: right;
+    color: #cccccc;
+}
+
+.have-account a {
+    color: red;
+}
+
+#div1 {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    /* text-align: center; */
+}
+
+.box {
+    width: 525px;
+    height: 285px;
+    margin: 50px auto;
+}
+
+.box .logo {
+    width: 525px;
+    height: 55px;
+
+}
+
+.box .logo .left {
+    width: 160px;
+    height: 100%;
+    float: left;
+}
+
+.box .logo .left img {
+    width: 100%;
+    height: 100%;
+}
+
+.box .logo .right {
+    float: right;
+    width: 365px;
+    height: 100%;
+}
+
+.box .logo .right img {
+    width: 100%;
+    height: 100%;
+}
+
+.box .tel {
+    width: 100%;
+    height: 30px;
+    border-bottom: 2px solid #3575C3;
+    margin-top: 5px;
+    line-height: 30px;
+    text-indent: 1em;
+    color: #3575C3;
+}
+
+.box form {
+    width: 100%;
+    height: 180px;
+    margin-top: 20px;
+}
+
+.box form input {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #79ABEA;
+    margin-left: 10px;
+}
+
+.box form span {
+    height: 18px;
+    width: 70px;
+    line-height: 24px;
+    display: block;
+    font-size: 12px;
+    float: left;
+    text-align: right;
+}
+
+.box form i {
+    color: #FF0000;
+    font-size: 12px;
+    font-style: normal;
+    padding-left: 3px;
+}
+
+.box form input[type=submit] {
+    width: 91px;
+    height: 33px;
+    border: none;
+    margin: 3px 0px 0px 80px;
+    cursor: pointer;
+}
+
+form label input[type=radio] {
+    width: 15px;
+    height: 15px;
+}
+
+form label b {
+    font-weight: 100;
+    font-size: 14px;
+}

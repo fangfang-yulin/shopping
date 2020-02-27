@@ -1,0 +1,162 @@
+.media{
+	display: flex;
+	justify-content: space-between;
+}
+#container{
+	/*position: relative!important;
+	z-index: 0!important;*/
+	/*top: 130px!important;*/
+	
+	
+}
+
+#zoom{
+				width: 500px;
+				height: 400px;
+				position: relative;
+				
+				overflow: visible;
+			}
+			#zoom #small{
+				width: 400px;
+				height: 400px;
+				position: relative;
+				cursor: move;
+				float: left;
+			}
+			#zoom #small img{
+				width: 100%;
+				height: 100%;
+			}
+			#zoom #small #show{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 200px;
+				height: 200px;
+				background: rgba(25,25,25,0.5);
+				display: none;
+			}
+			#zoom #ul{
+				margin-top: 5px;
+				width: 50px;
+				float: left;
+			
+				
+			}
+			#zoom #ul li{
+				list-style: none;
+				width: 48px;
+				height: 48px;
+				border: 1px solid white;
+				cursor: pointer;
+				
+			}
+			#zoom #ul li img{
+				width: 100%;
+				height: 100%;
+			}
+			#zoom #ul .selected{
+				border: 1px solid red;
+			}
+			#zoom #larger{
+				width: 400px;
+				height: 400px;
+				position: absolute;
+				top: 0;
+				left: 500px;
+				display: none;
+				overflow: hidden;
+				z-index: 998;
+			}
+			#zoom #larger img{
+				width: 800px;
+				height: 800px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+.panel-body .media .media-body dl dt,.panel-body .media .media-body dl dd{
+	margin-top: 10px;
+	border-bottom: 1px solid #EEEEEE;
+	font-size: 14px;
+	color: #3d4145;
+	font-family: Times, TimesNR, 'New Century Schoolbook', Georgia,'New York', serif;
+	padding-bottom: 10px;
+}
+.panel-body .media .media-body dl dd p{
+	line-height: 40px;
+	display:block;
+ 	 white-space: nowrap; 
+ 	 width: 100%; 
+ 	
+}
+.panel-body .media .media-body dl dd:last-child span{
+	background-color: red;display: inline-block;width: 16px;text-align: center;
+	margin-left: 40px;
+	color: white;
+	font-size: 14px;
+	font-family: Times, TimesNR, 'New Century Schoolbook', Georgia,'New York', serif;
+}
+.panel-body .media .media-body dl dd p button{
+	border: 1px solid red;
+	color:red ;
+	background-color: white;
+	margin-left: 15px;
+	text-align: center;
+	display:inline-block;
+	width: 60px;
+	height: 25px;
+	line-height: 25px;
+}
+#buy{
+	background-color: #EB3029;color: white;width: 80px;height: 40px;
+}
+#joinCart{
+	background-color: #00A989;color: white;width: 110px;height: 40px;
+}
+.panel-body .media .media-body dl dd:nth-child(3){
+	display: flex;justify-content: space-between;
+}
+.panel-body .media .media-body dl dd:nth-child(4) .btn-group button:active,.panel-body .media .media-body dl dd:nth-child(4) .btn-group button:hover,
+.panel-body .media .media-body dl dd:nth-child(4) .btn-group button:visited{
+	border: 1px solid #00E3E3!important;
+	background-color: #00E3E3!important;
+	color:#400000!important ;
+}
+
+#info_imgs p img{
+	width: 100%;
+}
+.nav-tabs li a{
+	color: black!important;
+	font-size: 12px!important;;
+}
+.nav-tabs .active a{
+	color: white!important;
+	font-size: 12px!important;
+	background-color: #3D4145!important;
+}
+#boy .banner_info .qita_top{
+	position: relative;
+	min-width: 1240px;
+    width: 100%;
+    height: 62px;
+    line-height: 62px;
+    text-align: left;
+    margin: 0px auto;
+}
+ #banner_info_ul{
+	width: 100%;
+	height: 200px;
+	position: relative;
+}
+ #banner_info_ul li{
+	width: 100%;
+	height: 200px;
+	position: absolute;
+}
+#banner_info_ul li img{
+	width: 100%;
+	height: 100%;
+}

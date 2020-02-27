@@ -1,0 +1,289 @@
+   *{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		
+	}
+	
+	.container2{
+		
+	}
+	
+	#all{
+		width: 950px;
+		margin-left: 80px;
+		margin-top: 150px;
+				
+	}
+	.car-title li{
+		float: left;
+		margin-top: 4px;
+				
+	}
+	.panel-heading{
+		height: 45px;
+	}
+	
+			
+	.carDetail1{
+		margin-left: 250px;
+		width: 80px;
+		display: inline-block;
+		
+	}
+			
+	.btn-group{
+		margin-left: 60px;
+				
+	}
+	.carDetail2{
+		width: 80px;
+		
+		padding-left: 50px;
+		display: inline-block;
+				
+	}
+	.carDetail3{
+		margin-left: 100px;
+		cursor: pointer;
+		width: 24px;
+		height: 16px;
+
+	}
+			
+	.panel-body{
+		position: relative;
+		padding-bottom: 38px;
+		border-bottom: 1px solid #e2e2e2;
+				
+	}
+			
+	.small_img{
+		width: 64px;
+		height: 74px;
+		margin-left: 90px;
+			
+	}
+			
+	.check{
+		position: absolute;
+		top: 55px;
+				
+	}
+	.media-heading{
+		font-size: 16px;
+		margin-top: 20px;
+		cursor: pointer;
+		width: 220px;
+		overflow: hidden;
+	    text-overflow:ellipsis;
+	    white-space: nowrap;
+	}
+	input[type="checkbox"]{
+		width: 16px;
+		height: 16px;
+		font-size: 14px;
+		cursor: pointer;
+	    position: relative;
+				
+	}
+	
+	input[type=checkbox]::after{
+     position: absolute;
+     top: 0;
+     background-color: white;
+     border: 1px solid gainsboro;
+     color: #000;
+     width: 16px;
+     height: 16px;
+     display: inline-block;
+     visibility: visible;
+     padding-left: 0px;
+     text-align: center;
+     content: ' ';
+     border-radius: 3px
+	}
+	
+	input[type=checkbox]:checked::after{
+     content: "✓";
+     font-size: 12px;
+     font-weight: bold;
+     color: red;
+	}
+			
+	.car-footer{
+		height: 64px;
+				
+	}
+	.car-footer p{
+		float: left;
+		line-height: 64px;
+				
+	}
+	.a1{
+		color: #999999;
+	}
+			
+	.a1:hover{
+		color: red;
+	}
+	#intro{
+		width: 950px;
+		margin-left: 80px;
+		
+	}
+	.jingpin{
+		width: 100%;
+		height: 42px;
+		background-color: #efefef;
+	}
+	.jingpin h4{
+		line-height: 42px;
+		margin-left: 15px;
+	}
+	.xiangguan a{
+		text-decoration: none;
+		color: #666666;
+	}
+	.xiangguan {
+		width: 130px;
+		height: 214px;
+		float: left;
+		margin-left: 20px;
+	}
+	.xiangguan  dt{
+		height: 144px;
+		text-align:center;
+		width: 128px;
+		overflow: hidden;
+	}
+	.xiangguan  dt img{
+		vertical-align: middle;
+		width: 128px;
+		height: 128px;
+		
+	}
+	.xiangguan  dt span{
+		height: 100%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.xiangguan dd{
+		margin-left: 15px;
+	}
+	.xiangguan dd a:hover{
+		text-decoration: none;
+		color: red;
+	}
+	
+	.xiangguan dd a p{
+		font-size: 14px;
+	}
+	
+	.xiangguan dd a p:nth-child(1){
+		width: 130px;
+		height: 25px;
+		overflow: hidden;
+	    text-overflow:ellipsis;
+	    white-space: nowrap;
+	   
+	}
+	
+	.xiangguan dd a p:nth-child(2){
+		width: 128px;
+		height: 20px;
+		margin-top: -15px;
+		
+	}
+	
+	.xiangguan .buycar{
+		width: 84px;
+		height: 24px;
+		color: red;
+		border: 1px solid red;
+		line-height: 24px;
+		text-align: center;
+				
+				
+				
+	}
+			
+	.myBuycar{
+		width: 276px;
+		height: 346px;
+		background-color: #efefef;
+		border: 1px solid #bababa;
+		border-top: 3px solid #fa322c;
+		position: fixed;
+		right: 30px;
+		top: 152px;
+	}
+		
+	.myBuycar-title{
+		width: 100%;
+		height: 40px;
+		line-height: 40px;
+		font-weight: 600;
+				
+	}
+	.myBuycar-contant{
+		background: white;
+		width: 264px;
+		height: 286px;
+		margin-left: 5px;
+		overflow: hidden;
+		
+	}
+	.myBuycar-contant p{
+		position: relative;
+		left: 12px;
+	}
+	.pay{
+		width: 240px;
+		height: 46px;
+		background: #666666;
+		color: #999999;
+		line-height: 46px;
+		text-align: center;
+		font-size: 18px;
+		margin-bottom: 15px;
+		cursor: pointer;
+	}
+	
+	.myBuycar-footer h4{
+		font-size: 14px;
+		float: left;
+		width: 74px;
+		height: 62px;
+		line-height: 62px;
+		text-align: center;
+		border-right:1px solid #e3e1e1;
+		color: #666666;
+	}
+	.myBuycar-footer ul{
+		float: left;
+		margin-left: 15px;
+		margin-top: 15px;
+	}
+	.myBuycar-footer ul li{
+		font-size: 12px;
+		color: #666666;
+		
+	}
+	
+	.tbr{
+		position: relative;
+		
+	}
+	
+	.uls1{
+		position: absolute;
+		right: 0;
+		font-size: 14px;
+		
+	}
+	.product{
+		margin-top: 55px;
+		margin-bottom: 25px;
+	}
+	

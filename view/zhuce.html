@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link href="../css/base.css" rel="stylesheet" type="text/css">
+    <link href="../css/zhuce.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo-title">欢迎注册</div>
+        <div class="have-account">已有账号？ <a href="login.html">请登录&gt;</a>
+        </div>
+    </div>
+    </div>
+    <div id="div1" class="box">
+        <form action="" methode="post" name="frm" onsubmit="return Submit()">
+            <span>用户名:</span><input type="text" name="user" id="user" value="" onblur="checkUser(this)" /><i
+                id="touser"></i><br />
+            <span>密码:</span><input type="password" name="pwd" id="pwd" value="" onblur="checkpwd(this)" /><i
+                id="touser"></i><br />
+            <span>确认密码:</span><input type="password" name="cpwd" id="cpwd" value="" onblur="checkcpwd(this)" /><i
+                id="touser"></i><br />
+            <span>电子邮箱:</span><input type="text" name="email" id="email" value="" onblur="checkemail(this)" /><i
+                id="touser"></i><br />
+            <span>性别:</span><label><input type="radio" checked="checked" name="sex"
+                    value="1"><b>男</b></label><label><input type="radio" name="sex" value="0"><b>女</b></label>
+            <!--<input type="text" name="mobile" id="mobile" value="" onblur="checkmobile(this)"/>--><i
+                id="touser"></i><br />
+            <span>生日:</span><input type="date" name="birthday" id="birthday" value="" onblur="checkbirthday(this)" /><i
+                id="touser"></i><br />
+            <input type="submit" id="" name="" value="注册" onsubmit="return false;" />
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        var User = false,
+        var Pwd = false,
+        var Cpwd = false,
+        var Email = false,
+        var Birthday = false;
+        var user = document.frm.user;
+        var pwd = document.frm.pwd;
+        var email = document.frm.email;
+        var birthday = document.frm.birthday;
+        var cpwd = document.frm.cpwd;
+        var sex = document.frm.sex;
+
+        function checkUser() {
+            var reg = /^[A-Za-z][0-9A-Za-z]{3,15}$/
+            var userN = user.nextElementSibling;
+            if (reg.test(user.value)) {
+                userN.style.color = "green";
+                userN.innerText = "√";
+                User = true;
+            } else {
+                userN.style.color = "red";
+                userN.innerText = "用户名由英文字母和数字的4-16位字符，以字母开头";
+                User = false;
+            }
+        }
+
+        function checkpwd() {
+
+            var reg = /^[0-9A-Za-z]{4,10}$/
+            var pwdN = pwd.nextElementSibling;
+            if (reg.test(pwd.value)) {
+                pwdN.style.color = "green";
+                pwdN.innerText = "√";
+                Pwd = true;
+            } else {
+                pwdN.style.color = "red";
+                pwdN.innerText = "密码不能含有非法字符，长度为4-10之间";
+                Pwd = false;
+            }
+        }
+
+        function checkcpwd() {
+
+
+            var cpwdN = cpwd.nextElementSibling;
+            if (pwd.value == cpwd.value && cpwd.value != '') {
+                cpwdN.style.color = "green";
+                cpwdN.innerText = "√";
+                Cpwd = true;
+            } else {
+                cpwdN.style.color = "red";
+                cpwdN.innerText = "两次输入的密码不一致";
+                Cpwd = false;
+            }
+
+        }
+
+        function checkemail() {
+
+            var reg = /^\w+@(qq|163|sina|126|shou|google)\.(com|cn)$/;
+            var emailN = email.nextElementSibling;
+            if (reg.test(email.value)) {
+                emailN.style.color = "green";
+                emailN.innerText = "√";
+                Email = true;
+            } else {
+                emailN.style.color = "red";
+                emailN.innerText = "E-mail格式不正确；例如：web@shou.com";
+                Email = false;
+            }
+        }
+
+        function checkbirthday() {
+
+            var reg = /^(19\d\d|20[0-1][0-9])-(0?[1-9]|1[0-2])-(0?[1-9]|[1-2]\d|3[0-1])$/
+            var birthdayN = birthday.nextElementSibling;
+            if (reg.test(birthday.value)) {
+                birthdayN.style.color = "green";
+                birthdayN.innerText = "√";
+                Birthday = true;
+            } else {
+                birthdayN.style.color = "red";
+                birthdayN.innerText = "生日格式不正确，例如1990-1-24或1990-01-24";
+                Birthday = false;
+            }
+
+
+        }
+
+        function Submit() {
+            if (User && Pwd && Cpwd && Email && Birthday) {
+                regsiter();
+            } else {
+                checkUser();
+                checkpwd();
+                checkcpwd();
+                checkemail();
+                checkbirthday();
+                return false;
+            }
+        }
+
+        function regsiter() {
+            var str = ''
+            var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz0123456789_'; /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+            for (var i = 0; i < 60; i++) {
+                str += $chars.charAt(Math.floor(Math.random() * $chars.length));
+            }
+            var xhrstr = "Uid=" + str + "&username=" + user.value + "&password=" + pwd.value + "&email=" + email.value +
+                "&birthday=" + birthday.value + "&sex=" + sex.value + "&state=0&code=" + str;
+            var xhr = new XMLHttpRequest();
+            xhr.open('get', '../servers/regsiter.php?' + xhrstr);
+            xhr.send();
+            alert(xhr.readyState);
+            xhr.onload = function () {
+                if (xhr.responseText == "yes") {
+                    alert("注册成功，请登录邮箱激活")
+                }
+                if (xhr.responseText == "no") {
+                    alert("注册失败，" + email.value + "邮箱地址已经被注册");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

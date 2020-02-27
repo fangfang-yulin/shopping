@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/header2.css">
+	<link rel="stylesheet" href="../css/animate.min.css">
+	<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../iconfont/iconfont.css">
+    <title>Document</title>
+</head>
+<body id="boy">
+	
+	
+	<div id="l-box">
+		<button onclick="Stop()" id="close"></button>	
+		<div class="btns" id="btns">
+			<button class="login_user login_active">账号密码登录</button>
+			<button class="reg_user">用户注册</button>
+		</div>
+		<div id="user_login" class="user_login">
+			<div class="tel">
+				用户登录
+			</div>
+	        <form action="" methode="post" name="user_login_frm" onsubmit="return Submit_login()" autocomplete="off" autocomplete="new-password">
+	            <span>用户名:</span><input type="text" autocomplete="off" autocomplete="new-password" name="user" id="user" value="" onblur="checkuser_Login(this)" placeholder="请输入用户名"/><i id="touser"></i><br /><br />
+	            <span>密码:</span><input type="password" autocomplete="off" autocomplete="new-password" name="pwd" id="pwd" value="" onblur="checkpwd_Login(this)" placeholder="请输入密码"/><i id="touser"></i><br /><br />
+	            <input type="submit" id="" name="" value="登录" onsubmit="return false;" />
+	        </form>
+    	</div>
+    	<div id="user_reg" class="user_reg">
+			<div class="tel">
+				新用户注册
+			</div>
+			<form action="" methode="post" name="frm" onsubmit="return Submit()" autocomplete="off" autocomplete="new-password">
+				<span>用户名:</span><input type="text" name="user" autocomplete="off" autocomplete="new-password" id="user" value="" onblur="checkUser(this)" /><i id="touser"></i><br />
+				<span>密码:</span><input type="password" name="pwd" autocomplete="off" autocomplete="new-password" id="pwd" value="" onblur="checkpwd(this)" /><i id="touser"></i><br />
+				<span>确认密码:</span><input type="password" name="cpwd" autocomplete="off" autocomplete="new-password" id="cpwd" value="" onblur="checkcpwd(this)" /><i id="touser"></i><br />
+				<span>电子邮箱:</span><input type="text" name="email" autocomplete="off" autocomplete="new-password" id="email" value="" onblur="checkemail(this)" /><i id="touser"></i><br />
+				<span>性别:</span><label><input type="radio" checked="checked" name="sex" value="1"><b>男</b></label><label><input type="radio" name="sex" value="0"><b>女</b></label><br />
+				<span>生日:</span><input type="date" name="birthday" id="birthday" value="" onblur="checkbirthday(this)" /><i id="touser"></i><br />
+				<input type="submit" id="" name="" value="注册" onsubmit="return false;" />
+			</form>
+		</div>
+	</div>
+    <!-- ---------头部begin----------- -->
+	
+	<!-- ----------头部end------------ -->
+	
+    <!-- ----------头部end------------ -->
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/wow.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/header2.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/cookie.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/login.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

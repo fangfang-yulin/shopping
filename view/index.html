@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/animate.min.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../iconfont/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+	<title>英雄联盟周边商城首页</title>
+	<link rel="icon" href="//js01.daoju.qq.com/zb/lolriotmall/pc/images/favicon.ico" type="image/x-icon">
+</head>
+<body id="boy">
+	<div id="l-box">
+				<button onclick="Stop()" id="close"></button>	
+				<div class="btns" id="btns">
+					<button class="login_user login_active" onclick="btns0()">账号密码登录</button>
+					<button class="reg_user" onclick="btns1()">用户注册</button>
+				</div>
+				<div id="user_login" class="user_login">
+					<div class="tel">
+						用户登录
+					</div>
+			        <form action="" methode="post" name="user_login_frm" onsubmit="return Submit_login()" autocomplete="off" autocomplete="new-password">
+			           <!--<span>用户名:</span>--><input type="text" autocomplete="off" autocomplete="new-password" style="text-indent: 32px;" name="user" id="user" value="" onblur="checkuser_Login(this)" placeholder="：请输入用户名"/><i id="touser"></i><br /><br />
+	           		<!--<span>密码:</span>--><input type="password" autocomplete="off" autocomplete="new-password" style="text-indent: 32px;" name="pwd" id="pwd" value="" onblur="checkpwd_Login(this)" placeholder="：请输入密码"/><i id="touser"></i><br /><br />
+			            <input type="submit" id="" name="" value="登录" />
+			        </form>
+		    	</div>
+		    	<div id="user_reg" class="user_reg">
+					<div class="tel">
+						新用户注册
+					</div>
+					<form action="" methode="post" name="frm" onsubmit="return Submit()" autocomplete="off" autocomplete="new-password">
+						<!--<span>用户名:</span>--><input type="text" autocomplete="off" autocomplete="new-password" style="text-indent: 32px;" name="user" id="user" value="" onblur="checkUser(this)" placeholder="：请输入用户名"/><i id="touser"></i><br />
+						<!--<span>密码:</span>--><input type="password" autocomplete="off" autocomplete="new-password" style="text-indent: 32px;" name="pwd" id="pwd" value="" onblur="checkpwd(this)" placeholder="：请输入密码"/><i id="touser"></i><br />
+						<!--<span>确认密码:</span>--><input type="password" autocomplete="off" autocomplete="new-password" style="text-indent: 32px;" name="cpwd" id="cpwd" value="" onblur="checkcpwd(this)" placeholder="：请确认密码"/><i id="touser"></i><br />
+						<!--<span>电子邮箱:</span>--><input type="text" autocomplete="off" autocomplete="new-password" style="text-indent: 32px;" name="email" id="email" value="" onblur="checkemail(this)" placeholder="：请输入邮箱"/><i id="touser"></i><br />
+						<span>性别:</span><br/><br/><label><input type="radio" checked="checked" name="sex" value="1"><b>男</b></label><label><input type="radio" name="sex" value="0"><b>女</b></label><br />
+						<span>生日:</span><br/><br/><input type="date" name="birthday" id="birthday" value="" onblur="checkbirthday(this)" /><i id="touser"></i><br />
+						<input type="submit" id="" name="" value="注册" />
+					</form>
+				</div>
+		</div>
+	<!-- ---------头部begin----------- -->
+	<div id="l_header">
+		<!-- 上部分 -->
+		<div class="top-bar d-none d-sm-none d-md-none d-lg-flex align-items-center justify-content-center">
+			<div class="container" style="padding:0">
+				<div class="row">
+					<div class="col-lg-6 c-md-12 tbl">
+						<h1 class="logo1"><a href="index.html" title="英雄联盟"></a></h1>
+						<h1 class="logo2"><a href="index.html" title="周边商城"></a></h1>
+						<h1 class="">
+							<div class="scroll_begin"><span class="tbp">由于国庆期间地方交通管制，发货将受到影响，北京地区目前已停止发货，2019.10.1-2019.10.2英雄联盟周边商城将暂停发货，于10.3日恢复正常，给您造成的不便，敬请谅解！</span></div>
+						</h1>
+					</div>
+					<div class="col-lg-6 d-md-none d-lg-block tbr">
+						<ul class="d-flex justify-content-end uls1">
+							<li id="store_login" class="store_login" style="margin: 0px 5px;"></li>
+							<li id="quit" class="quit" style="margin: 0px 5px;"><a href="#">退出</a></li>
+							<li id="store_cart" class="store_cart"><a href="shopCar.html"><i class="iconfont icon-gouwuchekong text-white" style="font-size: 20px"></i>购物车 <strong class="sb" id="sb">0</strong></a></li>
+							<li class="pre-sale"><a href="#"><i class="iconfont icon-kefu text-white " style="font-size: 20px"></i>客服咨询<i class="iconfont icon-youjiantou text-white" style="font-size: 10px"></i></a>
+							<ul class="ul1">
+								<li><a href="#">售前咨询</a></li>
+								<li><a href="#">售后咨询</a></li>
+							</ul>
+							</li>
+							<li class="after-sales"><a href="#"><i class="iconfont icon-weixinerweima text-white after" style="font-size: 20px"></i>微信商场<i class="iconfont icon-youjiantou text-white" style="font-size: 10px"></i></a>
+								<div class="nav-img"><img src="../img/wxcode.png" alt=""></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 下部分 -->
+		<nav class="navbar navbar-expand-lg navbar-light nav-l">
+			<div class="container container_nav">
+                <a class="navbar-brand d-flex justify-content-center d-sm-block d-md-block d-lg-none" href="#">
+                    <img src="../img/base_r1_c1.png" alt="" width="100%">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#l_nav" aria-controls="l_nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="l_nav">
+                    <ul class="navbar-nav mr-auto nav">
+                    <li class="nav-item">
+                    <a class="nav-link" href="index.html">商场首页 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+					<a class="nav-link" href="Modelcarve.html">雕塑手办</a>
+					<div class="nav-c">
+						<ul>
+							<li><a href="Modelcarve.html">大型雕塑</a></li>
+							<li><a href="Modelcarve.html">小型雕塑</a></li>
+							<li><a href="Modelcarve.html">限定手办</a></li>
+							<li><a href="Modelcarve.html">迷你手办</a></li>
+							<li><a href="Modelcarve.html">手办</a></li>
+						</ul>
+						<img src="../img/xl1.png" alt="">
+					</div>
+					<div class="nav-x">
+						<p><a href="Modelcarve.html">大型雕塑</a></p>
+						<p><a href="Modelcarve.html">小型雕塑</a></p>
+						<p><a href="Modelcarve.html">限定手办</a></p>
+						<p><a href="Modelcarve.html">迷你手办</a></p>
+						<p><a href="Modelcarve.html">手办</a></p>
+					</div>
+                    </li>
+                    <li class="nav-item">
+					<a class="nav-link" href="plush.html">毛绒玩具</a>
+					<div class="nav-c">
+						<ul>
+							<li><a href="plush.html">玩偶</a></li>
+							<li><a href="plush.html">帽子</a></li>
+						</ul>
+						<img src="../img/xl2.png" alt="">
+					</div>
+					<div class="nav-x ">
+						<p><a href="plush.html">玩偶</a></p>
+						<p><a href="plush.html">帽子</a></p>
+					</div>
+                    </li>
+                    <li class="nav-item">
+					<a class="nav-link" href="clothes.html">男女服饰</a>
+					<div class="nav-c">
+						<ul>
+							<li><a href="clothes.html">卫衣&夹克</a></li>
+							<li><a href="clothes.html">T桖</a></li>
+							<li><a href="clothes.html">其他</a></li>
+						</ul>
+						<img src="../img/xl3.png" alt="">
+					</div>
+					<div class="nav-x">
+						<p><a href="clothes.html">卫衣&夹克</a></p>
+						<p><a href="clothes.html">T桖</a></p>
+						<p><a href="clothes.html">其他</a></p>
+					</div>
+                    </li>
+                    <li class="nav-item">
+					<a class="nav-link" href="zhoubian/LPL.html" target="_blank">LPL周边</a>
+					<div class="nav-c">
+						<ul>
+							<li><a href="zhoubian/LPL.html" target="_blank">队服T桖</a></li>
+							<li><a href="zhoubian/LPL.html" target="_blank">队服裤子</a></li>
+							<li><a href="zhoubian/LPL.html" target="_blank">队服外套</a></li>
+							<li><a href="zhoubian/LPL.html" target="_blank">LPL其他</a></li>
+						</ul>
+						<img src="../img/xl4.png" alt="">
+					</div>
+					<div class="nav-x">
+						<p><a href="zhoubian/LPL.html" target="_blank">队服T桖</a></p>
+						<p><a href="zhoubian/LPL.html" target="_blank">队服裤子</a></p>
+						<p><a href="zhoubian/LPL.html" target="_blank">队服外套</a></p>
+						<p><a href="zhoubian/LPL.html" target="_blank">LPL其他</a></p>
+					</div>
+					</li>
+					<li  class="nav-item">
+					<a class="nav-link" href="jwerly.html">珠宝首饰</a>
+					<div class="nav-c">
+						<ul>
+							<li><a href="jwerly.html">项链</a></li>
+							<li><a href="jwerly.html">幸运珠</a></li>
+							<li><a href="jwerly.html">手链</a></li>
+							<li><a href="jwerly.html">配饰</a></li>
+						</ul>
+						<img src="../img/xl5.png" alt="">
+					</div>
+					<div class="nav-x">
+						<p><a href="jwerly.html">项链</a></p>
+						<p><a href="jwerly.html">幸运珠</a></p>
+						<p><a href="jwerly.html">手链</a></p>
+						<p><a href="jwerly.html">配饰</a></p>
+					</div>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="others.html">其他</a>
+					<div class="nav-c">
+						<ul>
+							<li><a href="others.html">鼠标垫</a></li>
+							<li><a href="others.html">手机壳</a></li>
+							<li><a href="others.html">海报艺术</a></li>
+							<li><a href="others.html">其他</a></li>
+						</ul>
+						<img src="../img/xl6.png" alt="">
+					</div>
+					<div class="nav-x">
+						<p><a href="others.html">鼠标垫</a></p>
+						<p><a href="others.html">手机壳</a></p>
+						<p><a href="others.html">海报艺术</a></p>
+						<p><a href="others.html">其他</a></p>
+					</div>
+                    </li>
+                    </ul>
+				</div>
+				<form class="search form-inline my-2 my-lg-0 align-items-center" onsubmit="return false">
+					<input class="form-control mr-sm-2" type="search" placeholder="阿狸" aria-label="Search" id="Search_Value">
+					<button class="btn-xs btn1 my-2 my-sm-0" type="submit" id="Search_shop_list_btn"></button>
+				</form>
+            </div>  		
+		</nav>
+		
+		
+		
+	</div>
+	
+	<!-- ----------头部end------------ -->
+	
+	<!-- ---------轮播begin----------- -->
+	<section id="l_carousel" class="carousel slide carousel-fade" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#l_carousel" data-slide-to="0" class="active"></li>
+				<li data-target="#l_carousel" data-slide-to="1"></li>
+				<li data-target="#l_carousel" data-slide-to="2"></li>
+				<li data-target="#l_carousel" data-slide-to="3"></li>
+			</ol>
+			<div class="carousel-inner">
+			  <div class="carousel-item active">
+				<img class="d-block w-100" src="../img/pick1.jpg" alt="First slide">
+			  </div>
+			  <div class="carousel-item">
+				<img class="d-block w-100" src="../img/pick2.jpg" alt="Second slide">
+			  </div>
+			  <div class="carousel-item">
+				<img class="d-block w-100" src="../img/pick3.jpg" alt="Third slide">
+			  </div>
+			  <div class="carousel-item">
+				<img class="d-block w-100" src="../img/pick4.jpg" alt="Third slide">
+			  </div>
+			</div>
+			<a class="carousel-control-prev" href="#l_carousel" role="button" data-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#l_carousel" role="button" data-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			  <span class="sr-only">Next</span>
+			</a>
+	</section>
+	<!-- ----------轮播end------------ -->
+
+	<!-- ---------内容begin----------- -->
+	<section id="l_main">
+		<div class="l_main1">
+			<div class="container">
+				<div class="row">
+					<div class="md-12 main-1">
+						<div id="main-1_list" class="carousel slide carousel-fade" data-ride="carousel">
+							<div class="carousel-inner wow fadeInDown" data-wow-delay="2s">
+								<div class="carousel-item active ">
+								<img class="d-block w-100 " src="../img/ygl-img1.png" alt="First slide">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="../img/ygl-img2.png" alt="Second slide">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="../img/ygl-img3.png" alt="Third slide">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="../img/ygl-img4.png" alt="Third slide">
+								</div>
+							</div>
+							<a class="carousel-control-prev" href="#main-1_list" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#main-1_list" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+						<a href="shop_info.html?id=10573" class="purchase" target="_blank"></a>
+						<!-- 1200以上 -->
+						<span class="p1 wow fadeInDown" data-wow-delay=".6s">2019全球总决赛专属</span>
+						<span class="p2 wow fadeInDown" data-wow-delay="1s">传承系列精品策略</span>
+						<span class="p3 wow fadeInDown" data-wow-delay="1.4s"><p>购买远古巨龙手办</p><p>即送远古巨龙头像</p></span>
+						<!-- 990以上 -->
+						<span class="p1-1 wow rotateInUpLeft" data-wow-delay=".6s">2019全球总决赛专属</span>
+						<span class="p2-2 wow rotateInUpLeft" data-wow-delay="1s">传承系列精品策略</span>
+						<span class="p3-3 wow rotateInUpLeft" data-wow-delay="1.4s"><p>购买远古巨龙手办</p><p>即送远古巨龙头像</p></span>
+						<!-- 640以上 -->
+						<span class="px1-1 wow rotateInUpLeft" data-wow-delay=".6s">2019全球总决赛专属</span>
+						<span class="px2-2 wow rotateInUpLeft" data-wow-delay="1s">传承系列精品策略</span>
+						<span class="px3-3 wow rotateInUpLeft" data-wow-delay="1.4s"><p>购买远古巨龙手办</p><p>即送远古巨龙头像</p></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="l_main_bg1 main_hid"></div>
+		<div class="l_main2 main_hid">
+			<div class="container"></div>
+				<div class="row text-center main2_cont">
+					<div class="col-md-3 goods goods2"><span>2019全球总决赛限定版<h3>提伯斯熊毛绒玩偶</h3></span><img class="wow zoomInLeft" data-wow-delay=".6s" src="../img/xn-img1.png" alt=""><p class="m_p1"></p><a href="shop_info.html?id=10573" target="_blank" class="m_a"></a></div>
+					<div class="col-md-3 goods goods2"><span>2019全球总决赛<h3>连帽衫</h3></span><img class="wow zoomInLeft" data-wow-delay="1s" src="../img/xn-img2.png" alt=""><p class="m_p2"></p><a href="shop_info.html?id=10575" target="_blank" class="m_a"></a></div>
+					<div class="col-md-3 goods goods2"><span>2019全球总决赛<h3>长袖T恤</h3></span><img class="wow zoomInLeft" data-wow-delay="1.4s" src="../img/xn-img4.png" alt=""><p class="m_p3"></p><a class="m_a" href="shop_info.html?id=10577" target="_blank"></a></div>
+					<div class="col-md-3 goods goods2"><span>2019全球总决赛<h3>长裤</h3></span><img class="wow zoomInLeft" data-wow-delay="1.8s" src="../img/xn-img3.png" alt=""><p class="m_p4"></p><a href="shop_info.html?id=10576" target="_blank" class="m_a"></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="l_main_bg2 main_hid"></div>
+		<div class="l_main3 main_hid">
+			<div class="container">
+				<div class="row text-center main3_cont">
+					<div class="col-md-4 goods"><span>LPL钛钢项链</span><img class="wow bounceInRight" data-wow-delay=".6s" src="../img/zs-img1.png" alt=""><p class="m_p1"></p><a href="shop_info.html?id=10578" target="_blank" class="m_a"></a></div>
+					<div class="col-md-4 goods"><span>LPL沙滩巾</span><img class="wow bounceInRight" data-wow-delay="1s" src="../img/zs-img2.png" alt=""><p class="m_p2"></p><a href="shop_info.html?id=10579" target="_blank" class="m_a"></a></div>
+					<div class="col-md-4 goods"><span>LPL战队冰箱贴</span><img class="wow bounceInRight" data-wow-delay="1.4s" src="../img/zs-img3.png" alt=""><p class="m_p3"></p><a href="shop_info.html?id=10613" target="_blank" class="m_a"></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="l_main_bg3 main_hid"></div>
+	</section>
+	<!-- ----------内容end------------ -->
+
+	<!-- ---------产品begin----------- -->
+	<section id="l_product">
+		<div class="cont d-flex">
+			<div><a href="shop_info.html?id=102480" target="_blank"><img class="wow fadeInRight" data-wow-delay="0.4s" src="../img/xt1.jpg" alt=""></a><p>提伯斯联盟 毛绒挂件盲盒</p></div>
+			<div><a href="shop_info.html?id=88180" target="_blank"><img class="wow fadeInRight" data-wow-delay="0.8s" src="../img/xt2.jpg" alt=""></a><p>iG冠军迷你手办套装尾款专区</p></div>
+			<div><a href="shop_info.html?id=10573" target="_blank"><img class="wow fadeInRight" data-wow-delay="1.2s" src="../img/xt3.jpg" alt=""></a><p>远古巨龙手办</p></div>
+			<div><a href="shop_info.html?id=93920" target="_blank"><img class="wow fadeInRight" data-wow-delay="1.6s" src="../img/xt4.jpg" alt=""></a><p>亚索&锐雯 中型雕塑套装</p></div>
+		</div>
+		
+	</section>
+	<!-- ----------产品end------------ -->
+
+	<!-- ---------尾部begin----------- -->
+	<section id="l_footer">
+		<div class="container mt-5 mb-4">
+			<div class="row d-flex justify-content-around product">
+				<div><i class="i1"></i><span>7天无理由退换货</span></div>
+				<div><i class="i2"></i><span>100%官方正品</span></div>
+				<div><i class="i3"></i><span>全场每单满199元包邮</span></div>
+			</div>
+		</div>
+		<div class="shop">
+			<div class="container">
+			<div class="row">
+				<ul class="col-md-3 pl-5">
+					<li>购物指南</li>
+					<li><a href="#">帐号注册与登录</a></li>
+					<li><a href="#">购买流程介绍</a></li>
+					<li><a href="#">支付方式</a></li>
+					<li><a href="#">常见问题</a></li>
+				</ul>
+				<ul class="col-md-3 pl-5">
+					<li>配送服务</li>
+					<li><a href="#">全场满199元免运费</a></li>
+					<li><a href="#">配送范围及运费</a></li>
+					<li><a href="#">配送进度查询</a></li>
+				</ul>
+				<ul class="col-md-3 pl-5">
+					<li>售后服务</li>
+					<li><a href="#">7天无理由退换货</a></li>
+					<li><a href="#">退换货流程</a></li>
+					<li><a href="#">商品送错的处理方案</a></li>
+					<li><a href="#">售后服务及投诉</a></li>
+				</ul>
+				<ul class="col-md-3 pl-5">
+					<li>服务中心</li>
+					<li><a href="#">售前咨询 售后服务</a></li>
+					<li><a href="#">客服热线：18397596284</a></li>
+					<li><a href="#">售后:2606252964@qq.com</a></li>
+				</ul>
+			</div>
+		</div>
+		</div>
+		<div class="container mt-5">
+			<div class="row">
+				<div class="message"><span><a href="#">关于商城</a><span><a href="#">服务条款</a><span><a href="#">合作伙伴</a><span><a href="#">法律声明</a></div>
+			</div>
+			<div class="row mt-4 mb-4 bottom">
+				<div class="col-md-3 offset-2 text-right"><span></span><i></i></div>
+				<div class="col-md-6 pl-4 b_right">
+					备案号:湘ICP备19011998号-2 | 客服邮箱： <a href="#">2606252964@qq.com</a>
+					<p>Copyright (C) 此网站为个人模仿制作，不涉及任何商业应用，绝不侵权腾讯</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ----------尾部end------------ -->
+	
+	<!-- 返回顶部 -->
+	<div class="return-top">TOP</div>
+</body>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/wow.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/cookie.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/header.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/login.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/header2.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/Search_shop_list.js" type="text/javascript" charset="utf-8"></script>
+</html>

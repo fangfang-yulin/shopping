@@ -1,0 +1,211 @@
+@font-face {
+    font-family: lk;
+    src: url('../fonts/lk.eot') format('embedded-opentype'),
+    url('../fonts/lk.svg') format('svg'),
+    url('../fonts/lk.ttf') format('truetype'),
+    url('../fonts/lk.woff') format('woff');
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+    font-family: lk;
+    font-style: normal;
+}
+a:hover{
+    text-decoration: none;
+}
+.btn-register {
+    color: #FFFFFF;
+    background-color: #0AB4F7;
+    border-color: #F4F7F7;
+}
+
+.btn-register:hover,
+.btn-register:focus,
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+    color: #FFFFFF;
+    background-color: #086DF2;
+    border-color: #F4F7F7;
+}
+
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+    background-image: none;
+}
+
+.btn-register.disabled,
+.btn-register[disabled],
+fieldset[disabled] .btn-register,
+.btn-register.disabled:hover,
+.btn-register[disabled]:hover,
+fieldset[disabled] .btn-register:hover,
+.btn-register.disabled:focus,
+.btn-register[disabled]:focus,
+fieldset[disabled] .btn-register:focus,
+.btn-register.disabled:active,
+.btn-register[disabled]:active,
+fieldset[disabled] .btn-register:active,
+.btn-register.disabled.active,
+.btn-register[disabled].active,
+fieldset[disabled] .btn-register.active {
+    background-color: #0AB4F7;
+    border-color: #F4F7F7;
+}
+
+.btn-register .badge {
+    color: #0AB4F7;
+    background-color: #FFFFFF;
+}
+
+/* *******************头部样式-begin******************** */
+#k_header{}
+#k_header .top-bar{
+    line-height: 40px;
+    border-bottom: 1px solid #e0e0e0;
+}
+#k_header .top-bar .container .row>div+div{
+    border-left: 1px solid #e0e0e0;
+}
+#k_header .top-bar .container .row .top-bar-1 a{
+    position: relative;
+}
+#k_header .top-bar .container .row .top-bar-1 a img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 16px;
+    z-index: 999;
+    display: none;
+}
+#k_header .top-bar .container .row .top-bar-1 a:hover img{
+    display: block;
+}
+.icon-phone::before{
+    content:'\e958';
+    font-size: 13px;
+}
+.icon-tel::before{
+    content:'\e942';
+    font-size: 13px;
+}
+.btn-sm{
+    font-size: 0.8rem;
+}
+
+/* 导航部分 */
+#k_header .navbar-k{
+    border-bottom: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    /* height: 80px; */
+}
+#k_header .navbar-k .navbar-brand{
+    /* height: 70px; */
+    margin-left: 15px;
+    margin-right: 30px;
+}
+#k_header .navbar-k .navbar-brand img{
+    width: 180px;
+    height: 54px;
+}
+#k_header .navbar-k .navbar-nav li a{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+#k_header .navbar-k .navbar-nav li a:hover{
+    border-bottom: 2px solid #0AB4F7;
+}
+/* *******************头部样式-end******************** */
+
+/* *******************轮播图-begin******************** */
+#k_carousel{
+    
+}
+#k_carousel .carousel-item{
+    background: no-repeat center center;
+    background-size: cover;
+}
+#k_carousel .carousel-item img{
+    width: 100%;
+}
+@media screen and (min-width:900px){
+    #k_carousel .carousel-item{
+        height: 410px;
+    }
+}
+/* *******************轮播图-end******************** */
+
+/* *******************热门课程-begin******************** */
+#k_hot{
+    
+}
+/* *******************热门课程-end******************** */
+
+/* *******************产品中心-begin******************** */
+#k_product{
+    background-color: #f0f0f0;
+    padding: 40px 0;
+}
+#k_product .nav-item{
+    font-size: 18px;
+}
+#k_product .nav-item a{
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+}
+#k_product .nav-item a.active{
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #0AB4F7;
+    color: #0AB4F7;
+}
+#k_product .tab-content{
+    padding-top: 20px;
+}
+#pd_two_1{
+    padding-top: 100px;
+}
+/* *******************产品中心-end******************** */
+
+/* *******************关于我们-begin******************** */
+#k_about{
+    /* background-color: pink; */
+}
+/* *******************关于我们-end******************** */
+
+/* *******************友情链接-begin******************** */
+#k_link{
+}
+/* *******************友情链接-end******************** */
+
+/* *******************尾部-begin******************** */
+#k_footer{
+    background: url('../imgs/ft_bg.png') no-repeat center center;
+    background-size:cover;
+    height: 200px;
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+}
+#k_footer .row{
+}
+#k_footer a{
+    color: white;
+}
+#k_footer li{
+    line-height: 40px
+}
+#k_footer .one{
+    border-right: 1px solid #ccc;
+}
+#k_footer .three{
+    border-left: 1px solid #ccc;
+    padding: 20px;
+}
+/* *******************尾部-end******************** */

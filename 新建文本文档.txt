@@ -1,0 +1,18 @@
+header2  : 28
+login :   79  244
+login2:   81  248
+loginodd:   83 250
+shop_info_login ：80  245
+zxcf   SKsepejCyzm6rryW
+139.196.9.193
+
+
+$conn=mysql_connect('139.196.9.193:3306','db_shop','Xw8YtFF2EZsWcSe7');
+
+'DB_TYPE' => 'mysql',                 //设置数据库类型
+'DB_HOST' => '127.0.0.1',            //设置主机
+'DB_NAME' => 'zxcf',                   //设置数据库名字
+'DB_USER' => 'zxcf',                  //设置用户名
+'DB_PWD'=>'SKsepejCyzm6rryW',                        //设置数据库密码
+'DB_PORT' => '3306',                  //设置数据库端口
+'DB_PREFIX' => 'zxcf_',	              //设置表前缀
