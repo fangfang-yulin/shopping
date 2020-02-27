@@ -1,4 +1,4 @@
-header2  : 28
+﻿header2  : 28
 login :   79  244
 login2:   81  248
 loginodd:   83 250
@@ -6,7 +6,7 @@ shop_info_login ：80  245
 zxcf   SKsepejCyzm6rryW
 139.196.9.193
 
-
+//基本配置详解
 $conn=mysql_connect('139.196.9.193:3306','db_shop','Xw8YtFF2EZsWcSe7');
 
 'DB_TYPE' => 'mysql',                 //设置数据库类型
